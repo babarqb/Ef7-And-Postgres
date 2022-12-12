@@ -1,4 +1,4 @@
-# EF Core 7 and Postgres Database
+# Repository Pattern WebApi, EF Core 7 and Postgres Database
 ### Install EF TOOL
 dotnet tool install --global dotnet-ef
 Or

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using MM.DataAccess.Context;
 using MM.DataAccess.Implementation;
 using MM.Domain.Repositories;
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MovieManagementDbContext>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddMvc().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);    
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

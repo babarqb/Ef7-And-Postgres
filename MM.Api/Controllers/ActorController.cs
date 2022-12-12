@@ -17,6 +17,6 @@ public class ActorController : Controller
     [HttpGet]
     public IActionResult Get()
     {
-        return Ok( _unitOfWork.Actors.GetAll());
+        return Ok( _unitOfWork.Actors.GetActorsWithMovies());
     }
 }
